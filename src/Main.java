@@ -39,7 +39,7 @@ public class Main {
                         getFilelist();
                         break;
                     case 2:
-                        upload();
+                        upload(); 
                         break;
                     case 5:
                         inwork = false;
