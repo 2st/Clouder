@@ -2,6 +2,7 @@ import sun.net.ftp.FtpClient;
 import sun.net.ftp.FtpDirEntry;
 import java.io.BufferedReader;
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.InputStreamReader;
 import java.net.*;
 import java.util.ArrayList;
@@ -39,7 +40,13 @@ public class Main {
                         getFilelist();
                         break;
                     case 2:
-                        upload(); 
+                        upload();
+                        break;
+                    case 3:
+                        download();
+                        break;
+                    case 4:
+                        delete();
                         break;
                     case 5:
                         inwork = false;
@@ -67,7 +74,22 @@ public class Main {
     public static void upload() throws Exception {
         System.out.print("File name: ");
         String filename = scan.readLine();
-        FileInputStream fileInpStream = new FileInputStream(filename);
+        FileInputStream fileInpStream = new FileInputStream("src/" + filename);
+        System.out.println("Please wait..");
         client.putFile(filename, fileInpStream);
+        fileInpStream.close();
+    }
+    public static void download() throws Exception {
+        System.out.print("File name: ");
+        String filename = scan.readLine();
+        FileOutputStream fileOutputStream = new FileOutputStream("src/" + filename);
+        System.out.println("Please wait..");
+        client.getFile(filename, fileOutputStream);
+        fileOutputStream.close();
+    }
+    public static void delete() throws Exception {
+        System.out.print("File name: ");
+        String filename = scan.readLine();
+        client.deleteFile(filename);
     }
 }
