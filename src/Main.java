@@ -53,7 +53,7 @@ public class Main {
                         break;
                 }
             } catch (Exception exc) {
-                System.out.println("Please enter a correct value");
+                System.out.println("Please enter a correct values");
             }
 
         }
