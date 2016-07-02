@@ -29,8 +29,8 @@ public class Main {
                 "\n4.Delete <filename>" +
                 "\n5.Exit");
         scan = new BufferedReader(new InputStreamReader(System.in));
-        boolean inwork = true;
-        while (inwork) {
+        boolean isRunning = true;
+        while (isRunning) {
             try {
                 System.out.print("\nEnter command: ");
                 command = scan.readLine();
@@ -49,7 +49,7 @@ public class Main {
                         delete();
                         break;
                     case 5:
-                        inwork = false;
+                        isRunning = false;
                         break;
                 }
             } catch (Exception exc) {
@@ -74,7 +74,7 @@ public class Main {
     public static void upload() throws Exception {
         System.out.print("File name: ");
         String filename = scan.readLine();
-        FileInputStream fileInpStream = new FileInputStream("src/" + filename);
+        FileInputStream fileInpStream = new FileInputStream("testfiles/" + filename);
         System.out.println("Please wait..");
         client.putFile(filename, fileInpStream);
         fileInpStream.close();
@@ -82,7 +82,7 @@ public class Main {
     public static void download() throws Exception {
         System.out.print("File name: ");
         String filename = scan.readLine();
-        FileOutputStream fileOutputStream = new FileOutputStream("src/" + filename);
+        FileOutputStream fileOutputStream = new FileOutputStream("testfiles/" + filename);
         System.out.println("Please wait..");
         client.getFile(filename, fileOutputStream);
         fileOutputStream.close();
