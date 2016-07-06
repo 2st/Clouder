@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Clouder</title>
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/reg.css">
 </head>
     <body>
     <div class="header">
         <table cellspacing="0">
             <tr>
                 <td><a href="index.html"><img src="images/clouder.png" width="400" height="60"></a></td>
-                <td><a href="login.html"><button>Вход</button></a></td>
+                <td><a href="index.html"><button>Вход</button></a></td>
             </tr>
         </table>
     </div>
@@ -27,12 +27,28 @@
                 </table>
             </div>
             <div class="page">
-                <a href="login.html"><button>Вход</button></a>
-                <a href="reg.html"><button>Регистрация</button></a>
+                <!--<td rowspan="2"><button tabindex="3">Вход</button></td>-->
+                <table>
+                    <tr>
+                        <td width="100px">Логин: </td>
+                        <td width="150px"><input type="text" tabindex="1"></td>
+                    </tr>
+                    <tr>
+                        <td width="100px">e-mail: </td>
+                        <td width="150px"><input type="text" tabindex="1"></td>
+                    </tr>
+                    <tr>
+                        <td>Пароль: </td>
+                        <td><input type="password" tabindex="2"></td>
+                    </tr>
+                    <tr>
+                        <td>Повторите пароль: </td>
+                        <td><input type="password" tabindex="2"></td>
+                    </tr>
+                </table>
             </div>
         </div>
     </div>
-
     <div class="bottom">
         <table cellspacing="1">
             <tr>

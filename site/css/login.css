@@ -1,0 +1,132 @@
+.header {
+    padding: 10px;
+    border-bottom: 2px solid #000;
+    background-color: gainsboro;
+}
+.header td {
+    padding-right: 80px;
+    width: 100%;
+}
+.header button {
+    width: 80px;
+    border: none;
+    display: inline-block;
+    font-family: Futura Md BT, Arial, sans-serif;
+    border-radius: 50px;
+    background: #12d151;
+    text-align: center;
+    height: 30px;
+    line-height: 28px;
+    cursor: pointer;
+}
+.header button:hover {
+    background: #15e158;
+    color: #fff;
+}
+
+.main {
+    z-index: 0;
+    height: 100%;
+    background-size: 100%;
+    background-attachment: fixed;
+    background-image: url("../images/mainBackground.png");
+}
+.content {
+    z-index: 1;
+    height: 100%;
+    background: #fff;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+.menu td {
+    width: 337px;
+}
+.menu button {
+    width: 100%;
+    height: 30px;
+    border: none;
+    font-family: Futura Md BT, Arial, sans-serif;
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+    border-bottom: 2px solid #000;
+    background: linear-gradient(#fff, rgba(4, 4, 4, 0.29));
+    text-align: center;
+    transition: color .2s;
+    cursor: pointer;
+}
+.menu button:hover {
+    background-image: linear-gradient(to bottom, #fff, #e3e3e3);
+    color: #12d151;
+}
+
+.page {
+    height: 1000px;
+    text-align: center;
+    border-right: 1px solid #000;
+    border-left: 1px solid #000;
+}
+.page table {
+    display: inline-block;
+    margin-top: 150px;
+    width: unset;
+}
+.page button {
+    display: block;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #000;
+    text-align: center;
+    font-family: Futura Md BT, sans-serif;
+    font-size: 15px;
+    background-color: #12d151;
+    cursor: pointer;
+}
+
+.bottom {
+    border-top: 2px solid #000;
+    padding-bottom: 20px;
+    width: 100%;
+    background-color: gainsboro;
+}
+.bottom table {
+    margin: auto;
+    width: 500px;
+}
+.bottomTdDivCLouder {
+    font-size: 13px;
+    font-family: Futura Md BT, sans-serif;
+    letter-spacing: 1px;
+    font-weight: 600;
+    padding-bottom: 2px;
+}
+.bottomTdDiv {
+    padding-bottom: 2px;
+    font-size: 13px;
+    font-family: Futura Md BT, sans-serif;
+    font-weight: 600;
+}
+.bottom td {
+    padding-top: 2px;
+    font-size: 12px;
+    font-family: Futura Md BT, sans-serif;
+    text-align: center;
+    vertical-align: top;
+}
+.bottom a:hover {
+    transition: .2s;
+    color: #898989;
+}
+
+table {width: 100%;}
+a { text-decoration: none; }
+a:link,
+a:visited { color: #000; }
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
